@@ -1,4 +1,3 @@
-
 import { EstudantService } from './../estudant.service';
 
 import { Component, OnInit } from '@angular/core';
@@ -7,12 +6,14 @@ import { Estudant } from '../estudant';
 
 import { Form, FormBuilder, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-estudants',
-  templateUrl: './estudants.component.html',
-  styleUrls: ['./estudants.component.css']
-})
 
+  templateUrl: './estudants.component.html',
+
+  styleUrls: ['./estudants.component.css'],
+})
 export class EstudantsComponent implements OnInit {
   Estudants: Estudant[] = [];
   Estudant: Estudant = {} as Estudant;
@@ -78,4 +79,3 @@ this.isEditing = true;
 
 
 }
-

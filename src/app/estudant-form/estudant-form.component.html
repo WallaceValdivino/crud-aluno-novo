@@ -24,9 +24,24 @@
 
 
 
+        <div class="mb-3">
+          <label for="location" class="form-label">Endereço</label>
+          <input type="text" formControlName="location" class="form-control" id="location" placeholder="Digite seu endereço">
+          <div *ngIf="submitted && location.invalid">
+            <small class="text-danger">ENDEREÇO INVALIDO!</small>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="cpf" class="form-label">CPF</label>
+          <input type="number" formControlName="cpf" class="form-control" id="cpf" placeholder="Digite seu CPF">
+          <div *ngIf="submitted && cpf.invalid">
+            <small class="text-danger">CPF INVALIDO!</small>
+          </div>
+        </div>
         <div>
-          <button class="btn btn-primary m-3" (click)="save()">Salvar</button>
-          <button class="btn btn-primary" (click)="clean()">Limpar</button>
+          <button class="btn btn-info m-3" (click)="save()">Salvar</button>
+          <button class="btn btn-info" (click)="clean()">Limpar</button>
         </div>
 
       </form>

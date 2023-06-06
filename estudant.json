@@ -1,0 +1,18 @@
+{
+  "estudants": [
+    {
+      "id": 1,
+      "name": "rwer",
+      "email": "werwer",
+      "location": "rwer",
+      "cpf": 4234324
+    },
+    {
+      "id": 2,
+      "name": "dfgfd",
+      "email": "abconta1daf@gmail.com",
+      "cpf": 98098098,
+      "location": "çkk"
+    }
+  ]
+}

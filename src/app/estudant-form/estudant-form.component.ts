@@ -32,6 +32,8 @@ export class EstudantFormComponent implements OnChanges {
       id: [''],
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
+      cpf: ['', [Validators.required]],
+      location: ['', [Validators.required]],
     });
   }
   ngOnChanges(changes: SimpleChanges): void {
@@ -58,5 +60,13 @@ export class EstudantFormComponent implements OnChanges {
 
   get email(): any {
     return this.formGroupEstudant.get('email');
+  }
+
+  get cpf(): any {
+    return this.formGroupEstudant.get('cpf');
+  }
+
+  get location(): any {
+    return this.formGroupEstudant.get('location');
   }
 }
