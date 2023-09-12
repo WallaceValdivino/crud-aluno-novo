@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { EstudantsComponent } from './estudants/estudants.component';
-import { EstudantFormComponent } from './estudant-form/estudant-form.component';
+import { StudentsComponent } from './students/students.component';
+import { StudentFormComponent } from './student-form/student-form.component';
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -13,8 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    EstudantsComponent,
-    EstudantFormComponent,
+    StudentsComponent,
+    StudentFormComponent,
 
   ],
   imports: [

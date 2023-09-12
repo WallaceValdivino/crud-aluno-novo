@@ -7,28 +7,28 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Estudant } from '../estudant';
+import { Student } from '../student';
 
 
 @Component({
-  selector: 'app-estudant-form',
-  templateUrl: './estudant-form.component.html',
-  styleUrls: ['./estudant-form.component.css']
+  selector: 'app-student-form',
+  templateUrl: './student-form.component.html',
+  styleUrls: ['./student-form.component.css']
 })
-export class EstudantFormComponent implements OnChanges {
+export class StudentFormComponent implements OnChanges {
   @Input()
-  Estudant: Estudant = {} as Estudant;
+  student: Student = {} as Student;
 
   @Output()
-  saveEvent = new EventEmitter<Estudant>();
+  saveEvent = new EventEmitter<Student>();
 
   @Output()
   cleanEvent = new EventEmitter<void>();
-  formGroupEstudant: FormGroup;
+  formGroupStudent: FormGroup;
   submitted: boolean = false;
   isEditing : boolean = false;
   constructor(private formBuilder: FormBuilder) {
-    this.formGroupEstudant = formBuilder.group({
+    this.formGroupStudent = formBuilder.group({
       id: [''],
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -37,36 +37,36 @@ export class EstudantFormComponent implements OnChanges {
     });
   }
   ngOnChanges(changes: SimpleChanges): void {
-    this.formGroupEstudant.setValue(this.Estudant);
+    this.formGroupStudent.setValue(this.student);
   }
 
   save() {
     this.submitted = true;
-    if (this.formGroupEstudant.valid) {
-      this.saveEvent.emit(this.formGroupEstudant.value);
-      this.formGroupEstudant.reset();
+    if (this.formGroupStudent.valid) {
+      this.saveEvent.emit(this.formGroupStudent.value);
+      this.formGroupStudent.reset();
       this.submitted = false;
     }
   }
   clean() {
     this.cleanEvent.emit();
-    this.formGroupEstudant.reset();
+    this.formGroupStudent.reset();
     this.submitted = false;
 
   }
   get name(): any {
-    return this.formGroupEstudant.get('name');
+    return this.formGroupStudent.get('name');
   }
 
   get email(): any {
-    return this.formGroupEstudant.get('email');
+    return this.formGroupStudent.get('email');
   }
 
   get cpf(): any {
-    return this.formGroupEstudant.get('cpf');
+    return this.formGroupStudent.get('cpf');
   }
 
   get location(): any {
-    return this.formGroupEstudant.get('location');
+    return this.formGroupStudent.get('location');
   }
 }

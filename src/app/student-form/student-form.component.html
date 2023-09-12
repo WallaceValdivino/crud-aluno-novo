@@ -2,7 +2,7 @@
   <div class="row">
     <div class="display-7 text-center text-white">
   <h3 class="mb-4">Cadastro de estudantes</h3>
-      <form [formGroup]="formGroupEstudant">
+      <form [formGroup]="formGroupStudent">
 
         <div class="mb-3">
           <label for="name" class="form-label">Nome</label>
@@ -41,7 +41,7 @@
         </div>
         <div>
           <button class="btn btn-primary m-3" (click)="save()">Salvar</button>
-          <button class="btn btn-primary" (click)="clean()">Limpar</button>
+          <button class="btn btn-primary" (click)="clean()">Cancelar</button>
         </div>
 
       </form>
