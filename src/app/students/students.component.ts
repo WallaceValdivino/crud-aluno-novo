@@ -35,8 +35,8 @@ export class StudentsComponent implements OnInit {
   }
 
   onCleanEvent() {
+    this.student = {} as Student;
     this.isEditing = false;
-
   }
 
   onSaveEvent(student: Student) {
