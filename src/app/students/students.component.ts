@@ -8,9 +8,7 @@ import { Student } from '../student';
 
 @Component({
   selector: 'app-students',
-
   templateUrl: './students.component.html',
-
   styleUrls: ['./students.component.css'],
 })
 export class StudentsComponent implements OnInit {
@@ -18,10 +16,7 @@ export class StudentsComponent implements OnInit {
   student: Student = {} as Student;
   isEditing: boolean = false;
 
-
-
   constructor(private studentService: StudentService) {
-
   }
 
   ngOnInit(): void {
@@ -30,7 +25,7 @@ export class StudentsComponent implements OnInit {
 
   loadStudents() {
     this.studentService.getStudents().subscribe({
-      next: (data) => (this.students = data),
+      next: (data) => (this.students = data)
     });
   }
 
@@ -75,7 +70,7 @@ export class StudentsComponent implements OnInit {
     })
   }
   }
-  
+
 
 
 }
